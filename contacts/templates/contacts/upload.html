@@ -1,0 +1,13 @@
+{% extends 'contacts/base.html' %}
+
+{% block title %}Upload VCF{% endblock %}
+
+{% block content %}
+  <h1 class="mb-4">Upload Your VCF File</h1>
+  <form method="post" enctype="multipart/form-data" class="border p-4 rounded shadow-sm">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Upload and Convert</button>
+  </form>
+{% endblock %}
+
