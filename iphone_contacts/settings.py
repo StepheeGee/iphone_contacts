@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-)n#nz3z)4*!u=yc1u12=qkn-tu!46jo$=h+j)+3hgv9f%lwb8!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['iphone-contacts.onrender.com']
+
+
 
 
 # Application definition
