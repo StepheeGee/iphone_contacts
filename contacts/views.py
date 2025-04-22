@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.contrib import messages
 from .forms import VCFUploadForm, ContactForm  # ⬅️ add ContactForm
 from .utils import parse_vcf_to_xls
+from django.http import HttpResponse
 import tempfile
 
 def upload_vcf(request):
@@ -48,3 +49,11 @@ def contact_view(request):
         form = ContactForm()
     
     return render(request, 'contacts/contact.html', {'form': form})
+
+
+
+def ads_txt(request):
+    return HttpResponse(
+        "google.com, pub-8213072590050147, DIRECT, f08c47fec0942fa0",
+        content_type="text/plain"
+    )

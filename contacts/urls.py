@@ -5,5 +5,6 @@ urlpatterns = [
     path('', views.upload_vcf, name='upload_vcf'),
     path('privacy/', views.privacy_policy, name='privacy'),
     path('contact/', views.contact_view, name='contact'),
+    path('ads.txt', views.ads_txt, name='ads_txt'), 
 ]
 
