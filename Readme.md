@@ -1,7 +1,7 @@
 from pathlib import Path
 
-# Full README content
-readme_content = """# 📇 VCF to Excel Converter (Django)
+# README 
+
 
 A simple Django-powered web app that lets users upload `.vcf` (vCard) files and instantly download them as formatted `.xlsx` Excel spreadsheets.
 
