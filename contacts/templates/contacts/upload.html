@@ -1,13 +1,32 @@
 {% extends 'contacts/base.html' %}
 
-{% block title %}Upload VCF{% endblock %}
+{% block title %}VCF to Excel Converter – Free vCard to XLS Tool{% endblock %}
 
 {% block content %}
-  <h1 class="mb-4">Upload Your VCF File</h1>
-  <form method="post" enctype="multipart/form-data" class="border p-4 rounded shadow-sm">
+<h1>Convert VCF (vCard) Files to Excel</h1>
+<p class="lead">
+  Upload your .vcf file and download your contacts as an Excel spreadsheet. Free, secure, and fast. This free online tool works on iPhone contacts, Android exports, and standard vCard files.
+</p>
+
+  <form method="post" enctype="multipart/form-data" class="border p-4 rounded shadow-sm mt-4">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" class="btn btn-primary">Upload and Convert</button>
+    <button type="submit" class="btn btn-primary w-100">Upload and Convert</button>
   </form>
-{% endblock %}
 
+  <hr class="my-5">
+
+  <h2>What is a VCF File?</h2>
+  <p>VCF (Virtual Contact File), also known as vCard, is a standard format for storing contact information including names, phone numbers, emails, and more. These files are commonly used by smartphones and email platforms for contact backups and transfers.</p>
+
+  <h2>Why Convert to Excel?</h2>
+  <p>Excel (.xlsx) format makes it easy to view, edit, and organize your contacts. Whether you're moving to a new device, creating a contact list for work, or managing your address book, converting to Excel helps you stay organized.</p>
+
+  <h2>Supported Devices</h2>
+  <ul>
+    <li>iPhone (.vcf exports from iCloud)</li>
+    <li>Android (.vcf exports from Contacts app)</li>
+    <li>Google Contacts</li>
+    <li>Microsoft Outlook</li>
+  </ul>
+{% endblock %}
