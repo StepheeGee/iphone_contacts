@@ -1,0 +1,16 @@
+{% extends 'contacts/base.html' %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Contact Us</h1>
+<p>If you need help or want to get in touch, feel free to send a message using the form below, or email us directly at 
+  <a href="mailto:theiconicbennieblake@gmail.com">theiconicbennieblake@gmail.com</a>.
+</p>
+
+<form method="post" class="border rounded p-4 shadow-sm mt-3">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-primary">Send Message</button>
+</form>
+{% endblock %}
